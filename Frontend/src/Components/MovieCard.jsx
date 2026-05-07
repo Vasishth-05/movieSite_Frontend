@@ -1,12 +1,14 @@
+import '../css/movieCard.css'
+
 function MovieCard({movie}){
-    return <div className="movieCard">
-        <div className="moviePoster">
+    return <div className="movie-card">
+        <div className="movie-poster">
             <img src={movie.url} alt={movie.title} />
         </div>
-        <div className="movieLikeBtn">
-            <button className="toggleBtn" onClick={onFavouriteClick}>🤍</button>
+        <div className="movie-overlay">
+            <button className="favorite-btn" onClick={onFavouriteClick}>🤍</button>
         </div>
-        <div className="movieOverlay">
+        <div className="movie-info">
             <h3>{movie.title}</h3>
             <p>{movie.releaseDate}</p>
         </div>
